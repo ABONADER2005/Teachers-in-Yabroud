@@ -154,21 +154,52 @@
            <!-- hight/width => video hight&width  -->
            <!-- loop => replay audio/video  -->
            <hr>
-           <form>
+           <form action="" method="post">
+            <!-- action attribute it is for back-end such as : action="data.php" -->
+            <!-- method attribute it is for the content of form if it shown in the url or not -->
             <div>
                 <label>Username</label>
-                <input type="text" required placeholder="User">
+                <input type="text" required placeholder="User" autofocus>
             </div>
             <!-- br is a break space between elements -->
             <br>
             <div>
-            <label>Pass</label>
-            <input type="password" required placeholder="Pass">
+            <label for="p">Pass</label>
+            <input id="p" type="password" required placeholder="Pass" name="pass" minlength="8" maxlength="16">
+            <!-- name attribute is for back-end server it isnt show in the front-end -->
             </div>
             <br>
-            <input type="submit" value="Sign Up">
+            <input id="G" type="radio" name="Grade" value="10">
+            <label for="G">Grade 10</label>
+            <br>
+            <br>
+            <input id="G" type="radio" name="Grade" value="11">
+            <label for="G">Grade 11</label>
+            <br>
+            <input type="submit" value="Sign Up">  
+            <input type="reset" value="Reset">
+            <hr>
+            <!-- Types of input : color,range,number,hidden,radio,checkbox   -->
+            <!-- Types of input attributes (at the end of the line of input.) : readonly,disabled,autofocus,min&max lenth   -->
+            <!-- read only : you can read the content and the content it will be send to back-end but disabeld the content will not send to back-end but both you can't edit on it.   -->
+            <!--  range&number we have many attributes such as min,max and step.  -->
+            <!-- id attribute it is unique you can'r repeat it -->
+            <label for="Teacher">Select your teacher</label>
+            <select name="Teacher" id="Teacher">
+                <!-- multiple attribute in the end of line of select which it allow to user to select multiple choices -->
+                <optgroup label="Math">
+                <option value="1" selected>Khadeeja Al Haj Yahya</option>
+                <!-- selected attribute it is when you want to make a choice is already selected for any reason -->
+                </optgroup> 
+                <optgroup label="Eng">
+                <option value="2">Hasan Al Haj-Ali</option>
+                </optgroup> 
+            </select>
+            <hr>
+            <textarea name="Any notice" id="note" cols="30" rows="10" placeholder="Any notice from you we will allow it and make it in our mind,thank you."></textarea>
            </form>
-           <!-- value for a content in laber -->
+           <!-- value for a content in label -->
+           <!-- action code is for back-end when we sign up in website the action code will help us to send info to back-end file or database -->
            <footer>
             Designed & Programmed By MK
            </footer>     
